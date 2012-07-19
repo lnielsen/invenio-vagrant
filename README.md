@@ -8,13 +8,23 @@ Invenio, as well as provisiong and installation of Invenio on these systems.
 
 Prerequisites
 -------------
-You must have vagrant, veewee and VirtualBox installed on your system.
+You must have Vagrant, Veewee and VirtualBox installed on your system.
 
 Scripts are tested with the following versions:
 
- * Vagrant 1.0.3
- * Veewee 0.3alpha9
- * VirtualBox 4.1.18
+ * Vagrant 1.0.3: http://vagrantup.com
+ * Veewee 0.3alpha9: https://github.com/jedi4ever/veewee
+ * VirtualBox 4.1.18: http://www.virtualbox.org
+
+Installation
+------------
+
+ * **VirtualBox**: Find your package on https://www.virtualbox.org/wiki/Downloads or
+   install via ```apt-get``` or your favourite package management tool.
+ * **Ruby + RubyGems**: Make sure you have Ruby 1.9.x (e.g. ```sudo apt-get install
+   ruby1.9.3 rubygems1.9.1``` on Ubuntu 12.04). 
+ * **Vagrant**: ```gem1.9.3 install vagrant```
+ * **Veewee**: ```gem1.9.3 install veewee --pre```
 
 Running
 -------
