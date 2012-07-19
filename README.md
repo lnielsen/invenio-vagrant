@@ -60,7 +60,7 @@ HTTP Server mode with reload mode
  * Ready
 ```
 
-Now go to http://192.168.33.10 (see atlantis-lucid32/Vagrantfile if you wonder
+Now go to http://192.168.33.10:4000 (see atlantis-lucid32/Vagrantfile if you wonder
 where the IP address came from).
 
 Running: Building a new basebox and firing it up
@@ -69,20 +69,28 @@ The following will build a new basebox (create a VM, install a fresh system on
 it, make all the necessary changes for a vagrant basebox) which is then
 provisioned and later Invenio is installed on it.
 
-```cd invenio-vagrant/basesboxes/```
+```
+cd invenio-vagrant/basesboxes/
+```
 
 Builds a new Ubuntu 12.04 base box (takes some time).
 
-```vagrant basebox build ubuntu1204```
+```
+vagrant basebox build ubuntu1204
+```
 
 Exports the basebox to a file
 
-```vagrant basebox export ubuntu1204 ubuntu1204.box```
+```
+vagrant basebox export ubuntu1204 ubuntu1204.box
+```
 
 Import the basebox in vagrant under the name ubuntu1204 
 (which is referenced by Vagrantfile)
 
-```vagrant box add ubuntu1204 ubuntu1204.box```
+```
+vagrant box add ubuntu1204 ubuntu1204.box
+```
 
 Fire up the VM (first time provisioning will run, and
 it may take longer time)
@@ -94,20 +102,28 @@ vagrant up
 
 Login to new VM
 
-```vagrant ssh``
+```
+vagrant ssh
+```
 
 Install Invenio in a virtualenv
 
-```vagrant@vm$ . /vagrant/invenio.sh```
+```
+vagrant@vm$ . /vagrant/invenio.sh
+```
 
 ... lots of output ...
 
 Activate Python's virtualenv
 
-```vagrant@vm$ soruce ~/envs/atlantis/bin/activate```
+```
+vagrant@vm$ soruce ~/envs/atlantis/bin/activate
+```
 
 Launch development serer (listining on all ports)
 
-```vagrant@vm (atlantis)$ serve -b 0.0.0.0```
+```
+vagrant@vm (atlantis)$ serve -b 0.0.0.0
+```
 
 Now go to http://192.168.33.12:4000 (note IP address changes from system to system - look in Vagrantfile)
