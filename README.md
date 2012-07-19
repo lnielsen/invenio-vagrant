@@ -36,7 +36,8 @@ Import the basebox in vagrant under the name ubuntu1204
 Fire up the VM (first time provisioning will run, and
 it may take longer time)
 
-```cd invenio-vagrant/atlantis-ubuntu1204/
+```
+cd invenio-vagrant/atlantis-ubuntu1204/
 vagrant up
 ```
 
