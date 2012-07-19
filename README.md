@@ -4,7 +4,7 @@ Invenio Vagrant
 About 
 -----
 Invenio vagrant is a set of scripts for automating vagrant basebox building for
-Invenio, as well as provisiong and installation of Invenio on these systems.
+Invenio, as well as provisioning and installation of Invenio on these systems.
 
 Prerequisites
 -------------
