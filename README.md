@@ -25,9 +25,50 @@ Installation
    ruby1.9.3 rubygems1.9.1``` on Ubuntu 12.04). 
  * **Vagrant**: ```gem1.9.3 install vagrant```
  * **Veewee**: ```gem1.9.3 install veewee --pre```
+ * **invenio-vagrant**: ```git clone https://github.com/lnielsen-cern/invenio-vagrant.git```
 
-Running
--------
+
+Running: Firing up a VM with an already existing basebox
+--------------------------------------------------------
+The following commands will download the standard Vagrant Ubuntu 10.04 box,
+run provisioning scripts and install Invenio in a Python virtualenv.
+
+Download, start and provision VM
+```
+cd invenio-vagrant/atlantis-lucid32/
+vagrant up
+```
+
+Login to VM:
+```
+vagrant ssh
+```
+
+Install Invenio 1.0.1 with Atlantis Demo Site
+```
+vagrant@localhost:~$ . /vagrant/invenio.sh
+```
+
+Finally, activate the virtualenv and run the invenio-devserver.
+
+```
+vagrant@localhost:~$ . ~/envs/atlantis/bin/activate
+(atlantis) vagrant@localhost:~$ serve -b 0.0.0.0
+HTTP Server mode with reload mode
+ * Running on http://0.0.0.0:4000/
+ * Spawning worker
+ * Ready
+```
+
+Now go to http://192.168.33.10 (see atlantis-lucid32/Vagrantfile if you wonder
+where the IP address came from).
+
+Running: Building a new basebox and firing it up
+------------------------------------------------
+The following will build a new basebox (create a VM, install a fresh system on
+it, make all the necessary changes for a vagrant basebox) which is then
+provisioned and later Invenio is installed on it.
+
 ```cd invenio-vagrant/basesboxes/```
 
 Builds a new Ubuntu 12.04 base box (takes some time).
@@ -51,7 +92,7 @@ cd invenio-vagrant/atlantis-ubuntu1204/
 vagrant up
 ```
 
- Login to new VM
+Login to new VM
 
 ```vagrant ssh``
 
