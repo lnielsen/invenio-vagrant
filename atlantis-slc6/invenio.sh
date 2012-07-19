@@ -1,4 +1,13 @@
 #!/bin/bash
+# 
+# Install Invenio in a virtualenv as described on
+# http://invenio-software.org/wiki/Installation/InvenioInVirtualenv
+# 
+
+##########
+# Step 1 #
+##########
+# All prerequsites are installed by provision.sh 
 
 ##########
 # Step 2 #
