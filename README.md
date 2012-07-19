@@ -15,6 +15,7 @@ Scripts are tested with the following versions:
  * Vagrant 1.0.3: http://vagrantup.com
  * Veewee 0.3alpha9: https://github.com/jedi4ever/veewee
  * VirtualBox 4.1.18: http://www.virtualbox.org
+ * NFS server installed on host system (for file sharing with VM)
 
 Installation
 ------------
@@ -23,10 +24,10 @@ Installation
    install via ```apt-get``` or your favourite package management tool.
  * **Ruby + RubyGems**: Make sure you have Ruby 1.9.x (e.g. ```sudo apt-get install
    ruby1.9.3 rubygems1.9.1``` on Ubuntu 12.04). 
- * **Vagrant**: ```gem1.9.3 install vagrant```
- * **Veewee**: ```gem1.9.3 install veewee --pre```
+ * **vagrant**: ```gem1.9.3 install vagrant```
+ * **veewee**: ```gem1.9.3 install veewee --pre```
  * **invenio-vagrant**: ```git clone https://github.com/lnielsen-cern/invenio-vagrant.git```
-
+ * **NFS server**: ```sudo apt-get install nfs-kernel-server```
 
 Running: Firing up a VM with an already existing basebox
 --------------------------------------------------------
@@ -127,3 +128,11 @@ vagrant@vm (atlantis)$ serve -b 0.0.0.0
 ```
 
 Now go to http://192.168.33.12:4000 (note IP address changes from system to system - look in Vagrantfile)
+
+Notes
+-----
+By default all VMs are setup to share a folder ```~/src``` on your host with the
+VM. On a VM the folder can be accssed in ```/home/vagrant/src```. This allows
+you easily access your source code on the host system from your VM. If you want
+to change it, just find and edit the ```config.vm.share_folder``` option in the Vagrantfile.
+
