@@ -6,6 +6,16 @@ About
 Invenio vagrant is a set of scripts for automating vagrant basebox building for
 Invenio, as well as provisioning and installation of Invenio on these systems.
 
+Currently there are examples of provisioning and installing Invenio on the following 
+boxes (Atlantis Institute of Science Demo Site):
+
+ * lucid32: Ubuntu 10.04 32-bit (the standard Vagrant base box)
+ * slc6: Scientific Linux 6.1 64-bit
+ * ubuntu1204: Ubuntu 12.04 64-bit
+
+Furthermore there examples of building the baseboxes for ```slc6``` and ```ubuntu1204```
+besides the provisioning and installation of the Atlantis demo site.
+
 Prerequisites
 -------------
 You must have Vagrant, Veewee and VirtualBox installed on your system.
@@ -34,7 +44,9 @@ Running: Firing up a VM with an already existing basebox
 The following commands will download the standard Vagrant Ubuntu 10.04 box,
 run provisioning scripts and install Invenio in a Python virtualenv.
 
-Download, start and provision VM
+Download, start and provision VM (this will not work if you already have a 
+basebox named _base_ - you can check that with the command ``` vagrant box
+list```).
 ```
 cd invenio-vagrant/atlantis-lucid32/
 vagrant up
@@ -121,13 +133,13 @@ Activate Python's virtualenv
 vagrant@vm$ soruce ~/envs/atlantis/bin/activate
 ```
 
-Launch development serer (listining on all ports)
+Launch development server (listining on all interfaces)
 
 ```
 vagrant@vm (atlantis)$ serve -b 0.0.0.0
 ```
 
-Now go to http://192.168.33.12:4000 (note IP address changes from system to system - look in Vagrantfile)
+Now go to http://192.168.33.12:4000 (note IP address changes from VM to VM - look in Vagrantfile)
 
 Notes
 -----

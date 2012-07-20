@@ -1,5 +1,8 @@
+# Vagrant status file
 .vagrant
-
+# Backup files
+*~
+# Python files
 *.py[co]
 
 # Packages
