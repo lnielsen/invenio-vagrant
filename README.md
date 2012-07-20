@@ -13,8 +13,11 @@ boxes (Atlantis Institute of Science Demo Site):
  * slc6: Scientific Linux 6.1 64-bit
  * ubuntu1204: Ubuntu 12.04 64-bit
 
-Furthermore there examples of building the baseboxes for ```slc6``` and ```ubuntu1204```
-besides the provisioning and installation of the Atlantis demo site.
+Furthermore there are examples of building the baseboxes for ```slc6``` and ```ubuntu1204```
+besides the provisioning and installation of the Atlantis demo site on these
+boxes.
+
+Invenio is by default installed in a virtualenv. 
 
 Prerequisites
 -------------
@@ -48,6 +51,7 @@ Download, start and provision VM (this will not work if you already have a
 basebox named _base_ - you can check that with the command ``` vagrant box
 list```).
 ```
+git clone https://github.com/lnielsen-cern/invenio-vagrant.git
 cd invenio-vagrant/atlantis-lucid32/
 vagrant up
 ```
@@ -83,6 +87,7 @@ it, make all the necessary changes for a vagrant basebox) which is then
 provisioned and later Invenio is installed on it.
 
 ```
+git clone https://github.com/lnielsen-cern/invenio-vagrant.git
 cd invenio-vagrant/basesboxes/
 ```
 
