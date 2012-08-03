@@ -68,6 +68,8 @@ sudo python get-pip.py
 sudo pip install virtualenv
 sudo pip install virtualenvwrapper
 
+sudo aptitude -y install python-feedparser
+
 echo "export WORKON_HOME=~/envs" >> ~/.bashrc
 echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
 source ~/.bashrc

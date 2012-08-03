@@ -27,7 +27,7 @@ source ~/.bashrc
 mkdir -p ~/deploy/
 cat > ~/deploy/activate-profile <<EOF
 export PYVER=`python -c "import sys;print '%s.%s' % (sys.version_info[0],sys.version_info[1])"`
-export CFG_INVENIO_SRCDIR=~/src/invenio-inspire-ops
+export CFG_INVENIO_SRCDIR=~/src/invenio
 export CFG_INSPIRE_SRCDIR=~/src/inspire
 export CFG_INVENIO_PREFIX=~/envs/inspire
 export CFG_INVENIO_USER=vagrant
@@ -280,6 +280,7 @@ cd $CFG_INSPIRE_SRCDIR
 cat > config-local.mk <<EOF
 PREFIX = /home/vagrant/envs/inspire
 INSTALL = install -g vagrant -m 775
+PYTHON = /home/vagrant/envs/inspire/bin/python
 EOF
 
 make
