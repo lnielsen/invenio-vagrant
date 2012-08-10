@@ -248,6 +248,10 @@ mysqladmin -u $MYSQL_ADMIN_USER --password=vagrant flush-privileges
 # Step 8 #
 ##########
 cd $CFG_INVENIO_SRCDIR
+
+# FIXME
+export CFLAGS=-m32
+
 aclocal-1.9
 automake-1.9 -a
 autoconf

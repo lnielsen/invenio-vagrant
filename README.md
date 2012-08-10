@@ -7,11 +7,17 @@ Invenio vagrant is a set of scripts for automating vagrant basebox building for
 Invenio, as well as provisioning and installation of Invenio on these systems.
 
 Currently there are examples of provisioning and installing Invenio on the following 
-boxes (Atlantis Institute of Science Demo Site):
+boxes:
+
+Atlantis Institute of Science Demo Site
 
  * lucid32: Ubuntu 10.04 32-bit (the standard Vagrant base box)
  * slc6: Scientific Linux 6.1 64-bit
  * ubuntu1204: Ubuntu 12.04 64-bit
+
+INSPIRE
+
+ * lucid64: Ubuntu 10.04 64-bit
 
 Furthermore there are examples of building the baseboxes for ```slc6``` and ```ubuntu1204```
 besides the provisioning and installation of the Atlantis demo site on these
